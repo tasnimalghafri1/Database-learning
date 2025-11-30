@@ -111,3 +111,22 @@ RDBMS: requires setup, database knowledge, and more hardware resources.
 - **Graph DB**: Social networks, recommendation engines.
 
 -------------------------------------------------------------------------------
+### Cloud Storage and Databases
+
+#### What is Cloud Storage and how does it relate to databases?
+- **Cloud Storage** is object/block/file storage provided as a service (e.g., S3, Azure Blob) for files, backups, and large objects.
+- Databases in the cloud may use cloud storage for backups, data files, or as the underlying storage layer. Managed databases abstract hardware & storage management from users.
+
+#### Advantages of cloud-based databases
+- Managed infrastructure (less ops).
+- Automated scaling, backups, and patching.
+- High availability and global replication options.
+- Cost model: pay-as-you-go.
+
+#### Disadvantages
+- Vendor lock-in; proprietary features may be hard to migrate.
+- Potential data residency concerns & compliance.
+- Network latency for on-prem apps; costs for egress & storage.
+- Less control over low-level tuning in fully managed services.
+
+(Examples: Azure SQL, Amazon RDS/Aurora, Google Cloud Spanne
