@@ -51,3 +51,32 @@ RDBMS: requires setup, database knowledge, and more hardware resources.
 
 
 ---------------------------------------------------------------------------------
+
+3. Roles in a Database System
+
+### System Analyst
+- Gathers and analyzes business requirements.
+- Maps business processes to data requirements and system interactions.
+- Works with stakeholders to define functional and non-functional specs.
+
+### Database Designer
+- Translates requirements into logical and physical schemas.
+- Decides normalization, keys, relationships, and indexing strategies.
+- Produces ER diagrams and schema documentation.
+
+### Database Developer
+- Implements database objects: tables, views, stored procedures, triggers.
+- Writes and optimizes queries and implements business logic in the DB.
+- Works on ETL jobs, data migration scripts and version control for DB code.
+
+### DBA (Database Administrator)
+- Responsible for installation, configuration, monitoring, tuning, backup/restore, security and availability.
+- Manages user accounts, capacity planning, replication, patching and disaster recovery.
+
+### Application Developer
+- Uses database via application code (ORMs or SQL) to create features.
+- Designs data access layers, writes queries, and ensures transactional integrity from the app side.
+
+### BI Developer
+- Builds reports, dashboards, data pipelines, and analytical models.
+- Works with data warehouses, OLAP cubes, and ETL to enable analytics and insights.
