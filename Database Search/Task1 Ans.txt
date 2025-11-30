@@ -151,3 +151,33 @@ RDBMS: requires setup, database knowledge, and more hardware resources.
 - Core SQL is portable, but procedural extensions and some SQL dialects are engine-specific (e.g., T-SQL vs PL/SQL).
 - Portability is possible with standard SQL for basic queries, but advanced functionality (stored procedures, specific datatypes) often needs conversion.
 
+#### Can one language work across different engines?
+- **Basic ANSI SQL** works across engines with minor syntax differences.
+- **Procedural languages** and vendor-specific features do not transfer directly and need rewriting.
+
+---------------------------------------------------------
+
+### Can We Transfer a Database Between Engines?
+
+#### Is migration possible?
+- Yes, migrating between SQL Server ↔ MySQL ↔ PostgreSQL ↔ Oracle is possible and common.
+
+#### Challenges
+- **Data types differences** (e.g., `DATETIME2` vs `TIMESTAMP` precision).
+- **Stored procedures and triggers** — different languages (T-SQL vs PL/pgSQL vs PL/SQL).
+- **SQL dialect differences** — functions, query hints, proprietary features.
+- **Constraints and defaults** — syntax & behavior differences.
+- **Index types and optimizer hints**.
+- **Permissions and security model**.
+- **Large data transfer** — downtime considerations, replication or ETL needed.
+- **Character sets/collations**.
+
+#### What to consider before migrating
+- Map data types and precision.
+- Inventory stored procedures, triggers, views, UDFs — plan for rewrite.
+- Plan data export/import (bulk copy, dump files, replication).
+- Consider character set, collation, indices, partitioning.
+- Plan for testing: functional, performance and integration tests.
+- Security & user permissions migration.
+- Choose migration approach: dump/load, replication, ETL, or use migration tools.
+
