@@ -181,3 +181,40 @@ RDBMS: requires setup, database knowledge, and more hardware resources.
 - Security & user permissions migration.
 - Choose migration approach: dump/load, replication, ETL, or use migration tools.
 
+--------------------------------------------------------------------------------
+## 5. Logical vs. Physical Schema
+
+### What is the Logical Schema?
+- Schema describing the data model from a business perspective: entities, relationships, attributes, and constraints — independent of storage details.
+- Represented as ER diagrams, classes, or abstract table structures.
+
+### What is the Physical Schema?
+- Concrete implementation details: tables, columns with data types, indexes, partitions, filegroups, storage paths and engine-specific configuration.
+
+### Difference & Importance
+- **Logical** focuses on correctness and business rules.
+- **Physical** focuses on performance, storage, and implementation.
+- Designers must understand both: logical for correctness and normalization; physical for performance optimization and real-world constraints (disk, memory).
+
+### Example: Student entity
+
+**Logical schema (conceptual / logical):**
+- Entity: Student
+  - Attributes: StudentID (PK), FirstName, LastName, DateOfBirth, Email, Major, EnrollmentDate
+  - Relationships: EnrolledIn -> Course (many-to-many via Enrollment)
+
+**Physical schema (example SQL DDL for a relational engine):**
+```sql
+-- file: student_physical_schema.sql
+CREATE TABLE Student (
+  StudentID INT PRIMARY KEY,
+  FirstName VARCHAR(100) NOT NULL,
+  LastName VARCHAR(100) NOT NULL,
+  DateOfBirth DATE,
+  Email VARCHAR(255) UNIQUE,
+  Major VARCHAR(100),
+  EnrollmentDate DATE,
+  -- indexes
+  INDEX idx_lastname (LastName)
+);
+
