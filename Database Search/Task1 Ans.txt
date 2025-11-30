@@ -130,3 +130,24 @@ RDBMS: requires setup, database knowledge, and more hardware resources.
 - Less control over low-level tuning in fully managed services.
 
 (Examples: Azure SQL, Amazon RDS/Aurora, Google Cloud Spanne
+
+-------------------------------------------------------------------------
+### Database Engines and Languages
+
+#### What is a Database Engine?
+- The software component that stores, retrieves, and manages access to data on disk and handles query processing, transactions, and storage management.
+
+#### Examples
+- SQL Server (Microsoft), MySQL, Oracle Database, PostgreSQL, MariaDB.
+
+#### Languages used
+- **ANSI SQL (standard SQL)** — core DDL/DML common to many engines.
+- **T-SQL** — Transact-SQL (Microsoft SQL Server) — procedural extensions.
+- **PL/SQL** — Procedural Language/SQL (Oracle) — Oracle’s procedural extensions.
+- **PL/pgSQL** — PostgreSQL procedural language.
+- Many engines provide their own procedural extensions, built-in functions, and administration tools.
+
+#### Relationship between engine and language
+- Core SQL is portable, but procedural extensions and some SQL dialects are engine-specific (e.g., T-SQL vs PL/SQL).
+- Portability is possible with standard SQL for basic queries, but advanced functionality (stored procedures, specific datatypes) often needs conversion.
+
