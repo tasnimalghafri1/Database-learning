@@ -80,3 +80,34 @@ RDBMS: requires setup, database knowledge, and more hardware resources.
 ### BI Developer
 - Builds reports, dashboards, data pipelines, and analytical models.
 - Works with data warehouses, OLAP cubes, and ETL to enable analytics and insights.
+-----------------------------------------------------------------------------------
+
+## 4. Additional Research Topics
+
+### Types of Databases
+
+#### Relational vs Non-Relational
+- **Relational (RDBMS):**
+  - Structured tables, schema-first, ACID transactions.
+  - Examples: SQL Server, MySQL, PostgreSQL, Oracle.
+  - Good for transactional systems and structured data.
+- **Non-Relational (NoSQL):**
+  - Schemeless or flexible schema: document (MongoDB), wide-column (Cassandra), key-value (Redis), graph (Neo4j).
+  - Optimized for scalability, large volumes, flexible data models, or specific query patterns.
+
+#### Centralized vs Distributed vs Cloud Databases
+- **Centralized:**
+  - Single server or single data center. Simpler management, potential single point of failure.
+- **Distributed:**
+  - Data spread across nodes/regions, can provide high availability, fault tolerance, low-latency read near users. Example: Cassandra, CockroachDB.
+- **Cloud Databases:**
+  - Managed DB services hosted by cloud providers (Amazon RDS/Aurora, Azure SQL, Google Cloud Spanner).
+  - Offer scaling, snapshots, automatic patching and backups.
+
+#### Use case examples
+- **Relational**: Bank transactions, ERP, inventory systems.
+- **Document DB (NoSQL)**: Content management, user profiles, logs.
+- **Wide-column**: Time-series, telemetry, high-write workloads.
+- **Graph DB**: Social networks, recommendation engines.
+
+-------------------------------------------------------------------------------
