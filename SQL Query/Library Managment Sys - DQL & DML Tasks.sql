@@ -174,3 +174,35 @@ SELECT * FROM Member
 SELECT * FROM Book
 
 SELECT * FROM Loan
+
+SELECT * FROM Book --Display all book records
+
+SELECT Title, Genre, IsAvailable
+FROM Book --Display each book’s title, genre, and availability
+
+SELECT Full_Name, Email, Membership_Start_Date
+FROM Member --Display all member names, email, and membership start date
+
+SELECT Title, Price AS BookPrice
+FROM Book --Display each book’s title and price as BookPrice
+
+SELECT *
+FROM Book
+WHERE Price > 250 --List books priced above 250 LE
+
+SELECT *
+FROM Member
+WHERE Membership_Start_Date < '2023-01-01' --List members who joined before 2023
+
+SELECT *
+FROM Book
+ORDER BY Price DESC --Display books ordered by price descending
+
+SELECT 
+MAX(Price) AS MaxPrice,
+MIN(Price) AS MinPrice,
+AVG(Price) AS AvgPrice
+FROM Book --Display the maximum, minimum, and average book price
+
+SELECT COUNT(*) AS TotalBooks
+FROM Book --Display total number of books
