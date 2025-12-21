@@ -1,4 +1,4 @@
-----------------JOIN----------------------------------------------
+﻿----------------JOIN----------------------------------------------
 
 --Display the department ID, name, and the full name of the faculty managing it
 
@@ -35,7 +35,7 @@ SELECT * FROM Faculty
 
 
 -- Display names of students in program ID 3 whose GPA is between 2.5 and 3.5.
--- Retrieve student names in the Engineering program who earned grades ? 90 in the "Database" course.
+-- Retrieve student names in the Engineering program who earned grades ≥ 90 in the "Database" course.
 -- Find names of students who are advised by "Dr. Ahmed Hassan"
 
 SELECT S.F_name, S.L_name
@@ -67,7 +67,7 @@ JOIN Department D
 ON F.Department_id = D.Department_id
 
 
--- Display all students and their advisors' names, even if some students don�t have advisors yet
+-- Display all students and their advisors' names, even if some students don’t have advisors yet
 
 SELECT S.F_name,
        S.L_name,
